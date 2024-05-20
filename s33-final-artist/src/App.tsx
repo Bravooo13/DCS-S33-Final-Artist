@@ -1,8 +1,13 @@
 import { useState } from "react";
 import "./style.css";
+import Signup from "./Signup/Signup";
 
 function App() {
-  return <div></div>;
+  return (
+    <div>
+      <Signup />
+    </div>
+  );
 }
 
 export default App;

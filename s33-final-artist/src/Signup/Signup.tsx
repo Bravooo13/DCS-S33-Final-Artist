@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import "../../css/style.css";
+import "../style.css";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
+import { Button } from "@material-tailwind/react";
 
 function Signup() {
   const [email, setEmail] = useState("");
@@ -40,40 +41,48 @@ function Signup() {
   };
 
   return (
-    <div className="flex flex-col border border-solid border-gray-500 p-[50px] mx-[30px]">
-      <div>Sign Up For Our Newsletter!</div>
-      <div>
-        Fill out the form below to receive interesting updates delivered
-        straight to your inbox.
+    <div className="flex flex-col items-center justify-center h-full pt-[85px]">
+      <div className="w-[50%] border border-solid border-gray-500 rounded-[10px] p-[50px]">
+        <div className="text-center mb-5 font-bold">
+          Sign Up For Our Newsletter!
+        </div>
+        <div className="text-center mb-5">
+          Fill out the form below to receive interesting updates delivered
+          straight to your inbox.
+        </div>
+        <form>
+          <div className="mb-2">Email Address</div>
+          <input
+            onChange={(e) => setEmail(e.target.value)}
+            type="email"
+            placeholder="Email"
+            value={email}
+            className="bg-graytone border border-solid border-gray-500 rounded-[3px] p-3 mb-5 text-white focus:outline-[1px] outline-gray-500 w-full"
+          />
+          <div className="mb-2">Full Name</div>
+          <input
+            onChange={(e) => setUsername(e.target.value)}
+            type="text"
+            placeholder="Full Name"
+            value={username}
+            className="bg-graytone border border-solid border-gray-500 rounded-[3px] p-3 mb-5 text-white focus:outline-[1px] outline-gray-500 w-full"
+          />
+          {error && <div className="text-red-500 mb-5">{error}</div>}
+          {successMessage && (
+            <div className="text-green-500 mb-5">{successMessage}</div>
+          )}
+          <Button
+            color="blue"
+            variant="filled"
+            size="lg"
+            ripple={true}
+            onClick={handleSignup}
+            className="flex items-center gap-3"
+          >
+            Sign up
+          </Button>
+        </form>
       </div>
-      <form>
-        <div>Email Address</div>
-        <input
-          onChange={(e) => setEmail(e.target.value)}
-          type="email"
-          placeholder="Email"
-          value={email}
-          className="bg-graytone border border-solid border-gray-500 rounded-[3px] p-3 mb-5 text-white focus:outline-[1px] outline-gray-500"
-        />
-        <div>Full Name</div>
-        <input
-          onChange={(e) => setUsername(e.target.value)}
-          type="text"
-          placeholder="Full Name"
-          value={username}
-          className="bg-graytone border border-solid border-gray-500 rounded-[3px] p-3 mb-5 text-white focus:outline-[1px] outline-gray-500"
-        />
-        {error && <div className="text-red-500">{error}</div>}
-        {successMessage && (
-          <div className="text-green-500">{successMessage}</div>
-        )}
-        <button
-          onClick={handleSignup}
-          className="p-3 rounded-[8px] border-none text-white bg-bluish font-bold hover:cursor-pointer"
-        >
-          Sign up
-        </button>
-      </form>
     </div>
   );
 }
