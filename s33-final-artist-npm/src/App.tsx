@@ -3,6 +3,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import NavBar from "./components/Navbar";
 import HomePage from "./components/HomePage";
+import Signup from "./Signup/Signup";
 import "./style.css";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
             {/* Add other routes for Art and Poetry here */}
           </Routes>
         </div>
+        <Signup />
       </Router>
     );
   };
