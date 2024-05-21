@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const NavBar: React.FC = () => {
   return (
     <nav className="bg-white p-4 fixed top-0 w-full">
-      <ul className="flex justify-center space-x-12 text-neutral-500 text-xl">
+      <ul className="color-black flex justify-center space-x-12 text-neutral-500 text-xl">
         <li>
           <Link to="/" className="hover:underline">
             Home
