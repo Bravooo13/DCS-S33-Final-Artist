@@ -1,19 +1,27 @@
+<<<<<<< HEAD
 import { useState } from "react";
 import "./App.css";
 
 function App() {
   const [count, setCount] = useState(0);
+=======
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import NavBar from "./components/Navbar";
+import HomePage from "./components/HomePage";
+>>>>>>> 78bc631b0d962a63cc9635e45c528dc7033f5841
 
+const App: React.FC = () => {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <Router>
+      <div className="bg-black min-h-screen">
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          {/* Add other routes for Art and Poetry here */}
+        </Routes>
       </div>
+<<<<<<< HEAD
       <h1>Vite + React</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
@@ -29,5 +37,10 @@ function App() {
     </>
   );
 }
+=======
+    </Router>
+  );
+};
+>>>>>>> 78bc631b0d962a63cc9635e45c528dc7033f5841
 
 export default App;
