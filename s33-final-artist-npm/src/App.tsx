@@ -1,12 +1,11 @@
 import { useState } from "react";
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import NavBar from "./components/Navbar";
+import HomePage from "./components/HomePage";
 import "./style.css";
 
 function App() {
-  import React from "react";
-  import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-  import NavBar from "./components/Navbar";
-  import HomePage from "./components/HomePage";
-
   const App: React.FC = () => {
     return (
       <Router>
