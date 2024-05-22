@@ -5,6 +5,7 @@ import HomePage from "./components/HomePage";
 import "./style.css";
 import Subscribe from "./components/Subscribe";
 import ContactUs from "./components/Contact";
+import Poet from "./components/Poet";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/subscribe" element={<Subscribe />} />
+          <Route path="/poetry" element={<Poet />} />
           {/* Add other routes for Art and Poetry here */}
         </Routes>
       </div>
