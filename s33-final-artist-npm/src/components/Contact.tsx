@@ -14,7 +14,7 @@ const ContactUs: React.FC = () => {
       <NavBar />
       <div className="md:flex-1 md:flex bg-gray-300">
         <div className="md:w-1/2 bg-gray-200 flex items-center justify-center">
-          <div className="max-w-md mx-auto p-6">
+          <div className="max-w-md border border-solid border-gray-500 rounded-[10px] px-10 py-16">
             <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
             <div className="flex flex-col space-y-4">
               <div className="flex items-center space-x-4">
@@ -55,26 +55,37 @@ const ContactUs: React.FC = () => {
           </div>
         </div>
 
-        <div className="md:w-1/2 relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+        <div className="md:w-1/2 relative overflow-hidden bg-gray-200">
+          <div className="top-0 flex items-center justify-center">
             <Carousel loop autoplay>
-              <img
-                src="https://i.pinimg.com/originals/7f/ed/8d/7fed8dac037d9e69775c70b0e8095767.jpg"
-                alt="image 1"
-                className="h-full"
-              />
-
-              <img
-                src="https://i.pinimg.com/736x/68/32/74/6832742d27028971aa0229cc40931a58.jpg"
-                alt="image 2"
-                className="h-full"
-              />
-
-              <img
-                src="https://i.pinimg.com/originals/b3/22/79/b32279ac3b6e4c3a0ba08c9e5b530f65.jpg"
-                alt="image 3"
-                className="h-full"
-              />
+              <div className="flex items-center justify-center h-full">
+                <img
+                  src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fa6%2Faf%2F3f%2Fa6af3f895afc89cd5b6f23dd014d8080.jpg&f=1&nofb=1&ipt=ca54510da98781dfe0a42042a14c328b24946bd950aea8bf2a6e1c20268b9026&ipo=images"
+                  alt="image 3"
+                  className="h-[790px]"
+                />
+              </div>
+              <div className="flex items-center justify-center h-full">
+                <img
+                  src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F12%2F07%2F0b%2F12070b285aaa0fe8d363f50892fc7d49.jpg&f=1&nofb=1&ipt=d93bff0e35debb78021121eed86bf218960d673834e6ce69c7ccd51be4bec77d&ipo=images"
+                  alt="image 2"
+                  className="h-[790px]"
+                />
+              </div>
+              <div className="flex items-center justify-center h-full">
+                <img
+                  src="https://i.pinimg.com/originals/7f/ed/8d/7fed8dac037d9e69775c70b0e8095767.jpg"
+                  alt="image 1"
+                  className="h-[790px] items-center"
+                />
+              </div>
+              <div className="flex items-center justify-center h-full">
+                <img
+                  src="https://i.pinimg.com/originals/b3/22/79/b32279ac3b6e4c3a0ba08c9e5b530f65.jpg"
+                  alt="image 3"
+                  className="h-[790px]"
+                />
+              </div>
             </Carousel>
           </div>
         </div>

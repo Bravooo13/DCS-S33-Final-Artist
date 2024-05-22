@@ -41,8 +41,8 @@ function Signup() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-full pt-[65px]">
-      <div className="w-[75%] border border-solid border-gray-500 rounded-[10px] p-[50px]">
+    <div className="bg-gray-200 flex flex-col items-center justify-center w-screen h-screen pt-[60px]">
+      <div className="w-[60%] bg-white border border-solid border-gray-500 rounded-[10px] h-[450px] p-[50px]">
         <div className="text-center mb-5 font-bold text-lg">
           Sign Up For Our Newsletter!
         </div>
