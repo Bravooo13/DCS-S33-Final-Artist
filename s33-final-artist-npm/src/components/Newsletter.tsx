@@ -41,9 +41,9 @@ function Signup() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-full pt-[85px]">
-      <div className="w-[50%] border border-solid border-gray-500 rounded-[10px] p-[50px]">
-        <div className="text-center mb-5 font-bold">
+    <div className="flex flex-col items-center justify-center h-full pt-[75px]">
+      <div className="w-[52%] border border-solid border-gray-500 rounded-[10px] p-[50px]">
+        <div className="text-center mb-5 font-bold text-lg">
           Sign Up For Our Newsletter!
         </div>
         <div className="text-center mb-5">
@@ -57,7 +57,7 @@ function Signup() {
             type="email"
             placeholder="Email"
             value={email}
-            className="bg-graytone border border-solid border-gray-500 rounded-[3px] p-3 mb-5 text-white focus:outline-[1px] outline-gray-500 w-full"
+            className="bg-graytone border border-solid border-gray-500 rounded-[3px] p-3 mb-5 text-black focus:outline-[1px] outline-gray-500 w-full"
           />
           <div className="mb-2">Full Name</div>
           <input
@@ -65,7 +65,7 @@ function Signup() {
             type="text"
             placeholder="Full Name"
             value={username}
-            className="bg-graytone border border-solid border-gray-500 rounded-[3px] p-3 mb-5 text-white focus:outline-[1px] outline-gray-500 w-full"
+            className="bg-graytone border border-solid border-gray-500 rounded-[3px] p-3 mb-5 text-black focus:outline-[1px] outline-gray-500 w-full"
           />
           {error && <div className="text-red-500 mb-5">{error}</div>}
           {successMessage && (
