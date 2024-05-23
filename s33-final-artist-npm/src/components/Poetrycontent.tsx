@@ -19,20 +19,20 @@ const Poetrycontent: React.FC = () => {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         return response.text();
-      })
+      }),
     ])
-    .then(([text1, text2]) => {
-      const formattedText1 = text1.replace(/\n/g, "<br />");
-      const formattedText2 = text2.replace(/\n/g, "<br />");
-      setPoet1Content(formattedText1);
-      setPoet2Content(formattedText2);
-      setLoading(false);
-    })
-    .catch((error) => {
-      console.error("Error fetching poet content:", error);
-      setError("Error fetching poet content");
-      setLoading(false);
-    });
+      .then(([text1, text2]) => {
+        const formattedText1 = text1.replace(/\n/g, "<br />");
+        const formattedText2 = text2.replace(/\n/g, "<br />");
+        setPoet1Content(formattedText1);
+        setPoet2Content(formattedText2);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error fetching poet content:", error);
+        setError("Error fetching poet content");
+        setLoading(false);
+      });
   }, []);
 
   return (
@@ -49,21 +49,13 @@ const Poetrycontent: React.FC = () => {
         </h1>
 
         <div className="mb-12">
-          <h3 className="text-4xl font-semibold text-blue-700">
-            The Skylark
-          </h3>
-          <h3 className="text-3xl font-semibold text-blue-700">
-            John Clark
-          </h3>
+          <h3 className="text-4xl font-semibold text-blue-700">The Skylark</h3>
+          <h3 className="text-3xl font-semibold text-blue-700">John Clark</h3>
 
           {loading ? (
-            <div className="text-lg text-red-800 text-center">
-              Loading...
-            </div>
+            <div className="text-lg text-red-800 text-center">Loading...</div>
           ) : error ? (
-            <div className="text-lg text-red-800 text-center">
-              {error}
-            </div>
+            <div className="text-lg text-red-800 text-center">{error}</div>
           ) : (
             <div
               className="text-lg text-red-800 text-center"
@@ -74,9 +66,10 @@ const Poetrycontent: React.FC = () => {
           <div className="pt-8 text-base font-semibold leading-7 justify-center item-center">
             <p>
               <a
-                href="https://www.poetryfoundation.org/poems"
+                href="https://www.poetryfoundation.org/poems/43950/the-skylark"
                 className="text-blue-500"
                 aria-label="Read the original poem on Poetry Foundation"
+                target="_blank"
               >
                 Read the original &rarr;
               </a>
@@ -92,22 +85,16 @@ const Poetrycontent: React.FC = () => {
 
         <div className="mb-12">
           <h3 className="text-4xl font-semibold text-blue-700">
-            
-          A Division of Gods
-
+            A Division of Gods
           </h3>
           <h3 className="text-2xl font-semibold text-blue-700">
-          BY ARIANA BROWN
+            BY ARIANA BROWN
           </h3>
 
           {loading ? (
-            <div className="text-lg text-red-800 text-center">
-              Loading...
-            </div>
+            <div className="text-lg text-red-800 text-center">Loading...</div>
           ) : error ? (
-            <div className="text-lg text-red-800 text-center">
-              {error}
-            </div>
+            <div className="text-lg text-red-800 text-center">{error}</div>
           ) : (
             <div
               className="text-lg text-red-800 text-center"
@@ -121,6 +108,7 @@ const Poetrycontent: React.FC = () => {
                 href="https://www.poetryfoundation.org/poems/161185/a-division-of-gods"
                 className="text-blue-500"
                 aria-label="Read the original poem on Poetry Foundation"
+                target="_blank"
               >
                 Read the original &rarr;
               </a>
